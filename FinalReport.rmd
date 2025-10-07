@@ -46,13 +46,34 @@ This problem is a categorical categorical problem. When we looked into it "race"
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
 
+```{r}
+dd3 <- mydata %>% group_by(cappun,race) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 
+
+# the group_by followed by summarize(count=n())
+
+basicC <- ggplot(dd3,aes(x=cappun,y=count,fill=race))
+basicC + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCC <- ggplot(dd3,aes(x=cappun,y=prcnt*100,fill=race)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
 
 ## Now with The Most data (fewer variables gives more data points)
 
 
 
 ### Numerical Descriptive Results
+
+```{r}
+table2 <- xtabs(~cappun + race, data=mydata)
+rowPerc(table2)
+colPerc(table2)
+```
+
+Of the participants in the study 80% of those who favor capital punishment were white, 11% was black and nine percent was other. 
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
