@@ -32,6 +32,8 @@ If not, then whose view differs from whom??
 
 # Methods
 
+This problem is a categorical categorical problem. When we looked into it "race", had 3 levels to it; white, black, and other. Capital punishment is a variable with two levels, those with and those against the punishment. 
+
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
 # Results
