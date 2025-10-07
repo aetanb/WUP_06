@@ -86,10 +86,16 @@ Of the participants in the study 80% of those who favor capital punishment were 
 
 ## Inferential Results
 
+
+
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
-`
 
+```{r}
+fisherXY(mydata$race,mydata$cappun)
+```
+
+Since our p value was exceedingly small, we can determine that the results of white and blacks is very different. And since the p value of of white and other is small and the p value of black and other is small as well meaning every race holds different opinions on capital punishment. 
 
 ## More data version
 
